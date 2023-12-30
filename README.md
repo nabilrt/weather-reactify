@@ -1,6 +1,6 @@
 # React + Vite
 
-<small>Technology: React JS</small>
+<small>Technology: React JS</small> <br>
 <small>Bundler: Vite</small>
 
 Demo:
