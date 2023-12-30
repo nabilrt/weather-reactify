@@ -94,7 +94,7 @@ function App() {
 
       <div className="m-auto flex items-center space-x-6 text-white font-bold text-xl">
         <span>Made With </span>
-        <img src="src/assets/react.svg" height="100px" width="100px"></img>
+        <img src="/react.svg" height="100px" width="100px"></img>
       </div>
     </div>
   );
