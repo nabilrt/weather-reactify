@@ -63,7 +63,7 @@ function App() {
           onChange={(e) => handleSearchInput(e)}
           ref={inputRef}
         />
-        <SearchButton onClick={fetchWeatherData}>
+        <SearchButton onClick={fetchWeatherData} disabled={city === ""}>
           <SearchLogo />
         </SearchButton>
       </div>
