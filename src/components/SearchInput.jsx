@@ -8,8 +8,8 @@ const SearchInput = ({ children, className, ...props }, ref) => {
       type="text"
       placeholder="Type any city name..."
       className={clsx(
-        "px-6 py-4 font-semibold text-sm border border-[#00d8ff] bg-[#444444] rounded-full w-full white-[#fc8eac] active:border-[#00d8ff] text-white",
-        className
+        "white-[#fc8eac] w-full rounded-full border border-[#00d8ff] bg-[#444444] px-6 py-4 text-sm font-semibold text-white active:border-[#00d8ff]",
+        className,
       )}
     >
       {children}

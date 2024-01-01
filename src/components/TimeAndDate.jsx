@@ -18,20 +18,22 @@ const TimeAndDate = ({ locationData }) => {
   }
 
   return (
-    <div className="w-1/3 bg-[#444444] rounded-xl text-white shadow-sm shadow-[#00d8ff]  flex justify-center items-center border-1 border-gray-800">
+    <div className="border-1 flex w-1/3 items-center justify-center rounded-xl  border-gray-800 bg-[#444444] text-white shadow-sm shadow-[#00d8ff]">
       <div className="flex flex-col  items-center  space-y-3">
         <div
           className={`font-bold ${
-            locationData.name && locationData.name.length > 25 ? "text-xl" : "text-3xl"
+            locationData.name && locationData.name.length > 25
+              ? "text-xl"
+              : "text-3xl"
           } mb-4`}
         >
           {locationData.name}
         </div>
-        <div className="flex flex-col space-y-1 text-center mt-7">
-          <div className="font-semibold text-6xl">
+        <div className="mt-7 flex flex-col space-y-1 text-center">
+          <div className="text-6xl font-semibold">
             {formatTimestamp(locationData.localtime).time}
           </div>
-          <div className="font-semibold text-lg">
+          <div className="text-lg font-semibold">
             {formatTimestamp(locationData.localtime).weekday},{" "}
             {formatTimestamp(locationData.localtime).dayMonth}
           </div>

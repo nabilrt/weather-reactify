@@ -55,7 +55,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col p-4 w-2/3 m-auto space-y-6">
+    <div className="m-auto flex w-2/3 flex-col space-y-6 p-4">
       <LogoDetails />
       <div className="flex w-full space-x-1">
         <SearchedComponent
@@ -69,13 +69,13 @@ function App() {
       </div>
 
       {state.loading ? (
-        <div className="items-center justify-center flex">
+        <div className="flex items-center justify-center">
           <RingLoader color="#00d8ff" />
         </div>
       ) : (
         <div>
           {state.error ? (
-            <div className="items-center justify-center flex text-2xl text-white font-bold uppercase">
+            <div className="flex items-center justify-center text-2xl font-bold uppercase text-white">
               {state.error}
             </div>
           ) : (
@@ -92,9 +92,14 @@ function App() {
         </div>
       )}
 
-      <div className="m-auto flex items-center space-x-6 text-white font-bold text-xl">
+      <div className="m-auto flex items-center space-x-6 text-xl font-bold text-white">
         <span>Made With </span>
-        <img src="/react.svg" height="100px" width="100px"></img>
+        <img
+          src="/react.svg"
+          height="100px"
+          width="100px"
+          className="animate-spin"
+        ></img>
       </div>
     </div>
   );

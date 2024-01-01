@@ -7,22 +7,22 @@ import Sunrise from "./icons/Sunrise";
 
 const WeatherDetails = ({ weatherData }) => {
   return (
-    <div className="w-2/3 bg-[#444444] rounded-xl p-8 flex text-white items-center shadow-sm shadow-[#00d8ff] border-1 border-gray-800">
-      <div className="w-1/3 flex flex-col space-y-3 ">
+    <div className="border-1 flex w-2/3 items-center rounded-xl border-gray-800 bg-[#444444] p-8 text-white shadow-sm shadow-[#00d8ff]">
+      <div className="flex w-1/3 flex-col space-y-3 ">
         <p className="text-5xl font-extrabold tracking-wider">
           {weatherData.temp_f}&#xb0;F
         </p>
         <p className="text-xl font-semibold tracking-wider">
           Feels Like: {weatherData.feelslike_c}&#xb0;C
         </p>
-        <div className="flex space-x-2 items-center">
+        <div className="flex items-center space-x-2">
           <Sunrise />
           <div className="flex flex-col">
             <p className="text-sm font-semibold">Sunrise</p>
             <p className="text-sm font-semibold">N/A</p>
           </div>
         </div>
-        <div className="flex space-x-2 items-center">
+        <div className="flex items-center space-x-2">
           <Sunset />
           <div className="flex flex-col">
             <p className="text-sm font-semibold">Sunset</p>
@@ -30,8 +30,8 @@ const WeatherDetails = ({ weatherData }) => {
           </div>
         </div>
       </div>
-      <div className="w-1/3 flex flex-col space-y-4 ">
-        <div className="flex flex-col text-center m-auto">
+      <div className="flex w-1/3 flex-col space-y-4 ">
+        <div className="m-auto flex flex-col text-center">
           <img
             src={weatherData.condition.icon.replace(/\/64x64\//, "/128x128/")}
             alt="sun-star"
@@ -39,7 +39,7 @@ const WeatherDetails = ({ weatherData }) => {
           <p className="text-xl font-bold ">{weatherData.condition.text}</p>
         </div>
       </div>
-      <div className="w-1/3 flex flex-col space-y-4 items-end">
+      <div className="flex w-1/3 flex-col items-end space-y-4">
         <div className="flex space-x-8">
           <div className="flex flex-col ">
             <div className="mb-2">
@@ -75,7 +75,7 @@ const WeatherDetails = ({ weatherData }) => {
               <UV />
               <p className="text-center text-sm ">{weatherData.uv}</p>
             </div>
-            <p className="text-center text-sm pr-3">UV</p>
+            <p className="pr-3 text-center text-sm">UV</p>
           </div>
         </div>
       </div>

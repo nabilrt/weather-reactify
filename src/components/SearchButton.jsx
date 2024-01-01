@@ -9,16 +9,16 @@ const SearchButton = ({
     <button
       {...props}
       className={clsx(
-        "px-4 py-2 rounded-full font-semibold text-sm shadow-md disabled:opacity-50 disabled:cursor-not-allowed",
+        "rounded-full px-4 py-2 text-sm font-semibold shadow-md disabled:cursor-not-allowed disabled:opacity-50",
         {
-          "text-white bg-[#444444] hover:bg-gray-700": variant === "primary",
-          "text-white bg-emerald-400 hover:bg-emerald-600":
+          "bg-[#444444] text-white hover:bg-gray-700": variant === "primary",
+          "bg-emerald-400 text-white hover:bg-emerald-600":
             variant === "secondary",
-          "text-white bg-red-600 hover:bg-red-800": variant === "danger",
-          "text-white bg-yellow-500 hover:bg-yellow-700": variant === "warning",
-          "text-white bg-blue-500 hover:bg-blue-700": variant === "success",
+          "bg-red-600 text-white hover:bg-red-800": variant === "danger",
+          "bg-yellow-500 text-white hover:bg-yellow-700": variant === "warning",
+          "bg-blue-500 text-white hover:bg-blue-700": variant === "success",
         },
-        className
+        className,
       )}
     >
       {children}
